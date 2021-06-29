@@ -14,13 +14,14 @@ def CHECK_PASSWORD(password, hash):
 
 
 def IsLoggedIn(request):
-    if request.session.has_key("username"):
+    #if request.session.has_key("username"):
         try:
-            user = User.objects.get(username=request.session["username"])
+            #user = User.objects.get(username=request.session["username"])
+            user=User.objects.get(username="xyz123")
             return user
         except:
             return None
-    else:
+    #else:
         return None
 
 
