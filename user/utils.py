@@ -48,7 +48,7 @@ def IsRegistered(request):
 
 def IsRegistered(request):
     try:
-        data = User.objects.get(roll=request.session["roll"])
+        data = User.objects.get(roll=request.data["roll"])
         return data.activated
     except:
         return None
